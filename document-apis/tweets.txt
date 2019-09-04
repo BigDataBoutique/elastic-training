@@ -1,0 +1,127 @@
+{
+               "@timestamp": "2014-11-26T16:59:05.000Z",
+               "message": "RT @foxymeryl: Dreamed it was the zombie apocalypse in London and a tidal wave took out the city, was very wet",
+               "user": "apocsurvivalist",
+               "client": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>",
+               "retweeted": false,
+               "source": "http://twitter.com/apocsurvivalist/status/537651770223509505"
+}
+
+
+{
+               "@timestamp": "2014-11-26T16:59:05.000Z",
+               "message": "RT @UKIP: UKIP Leader @Nigel_Farage: If Owen Paterson wants to leave the EU he should join UKIP. http://t.co/NTX6X0YoTn",
+               "user": "scousedaz77",
+               "client": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+               "retweeted": false,
+               "source": "http://twitter.com/scousedaz77/status/537651770668101634",
+               "@version": "1",
+               "urls": [
+                  "http://www.breitbart.com/Breitbart-London/2014/11/26/Nigel-Farage-If-Owen-Paterson-Wants-to-Leave-the-EU-He-Should-Join-UKIP"
+               ]
+            }
+
+
+{
+               "@timestamp": "2014-11-26T16:59:06.000Z",
+               "message": "RT @VirginEMI: Watch @professorgreen live from London at 9pm tonight for @HPUK http://t.co/QCPBlH9gns #HPConnectedMusic http://t.co/MrT7AD9f0C",
+               "user": "lipslikesugar67",
+               "client": "<a href=\"http://twitter.com/#!/download/ipad\" rel=\"nofollow\">Twitter for iPad</a>",
+               "retweeted": false,
+               "source": "http://twitter.com/lipslikesugar67/status/537651772782043136",
+               "@version": "1",
+               "urls": [
+                  "http://www.professorgreen.com/live"
+               ]
+            }
+
+
+{
+               "@timestamp": "2014-11-26T16:59:06.000Z",
+               "message": "RT @timchester: Naked man runs over rooftops of London in the name of art &gt;  http://t.co/5yjIiTBE9Y via @mashable",
+               "user": "harveywallinger",
+               "client": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+               "retweeted": false,
+               "source": "http://twitter.com/harveywallinger/status/537651773260185600",
+               "@version": "1",
+               "urls": [
+                  "http://mashable.com/2014/11/25/naked-parkour/#:eyJzIjoidCIsImkiOiJfZnVvYmN6anY2dnhpY3ZkNyJ9"
+               ]
+            }
+
+{
+               "@timestamp": "2014-11-26T16:59:06.000Z",
+               "message": "RT @sarahill42: '@tottenhamlife @tottenhamplough @tottenhamarts @wildescheese @Footsteps_Moon \nHarringay or Haringey even is 8th best http://t.co/UwO7xfKLD9",
+               "user": "tottenhamlife",
+               "client": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+               "retweeted": false,
+               "source": "http://twitter.com/tottenhamlife/status/537651773604122625",
+               "@version": "1",
+               "urls": [
+                  "http://metro.co.uk/2014/11/25/london-boroughs-ranked-from-worst-to-best-4954449/"
+               ]
+            }
+
+{
+               "@timestamp": "2014-11-26T16:59:07.000Z",
+               "message": "#NewYork #Sports Carmelo Anthony not expected to play against Mavericks: Carmelo Anthony wasn't a... http://t.co/fizVdOcyb1 #News #Sport",
+               "user": "NewYork__News",
+               "client": "<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>",
+               "retweeted": false,
+               "source": "http://twitter.com/NewYork__News/status/537651777135329281",
+               "@version": "1",
+               "urls": [
+                  "http://nwsdy.li/1rkui1q"
+               ]
+            }
+
+
+{
+               "@timestamp": "2014-11-26T16:59:07.000Z",
+               "message": "RT @wikileaks: Just now: #Assange &amp; #Chomsky take in the view of the police operation against the Ecuadorian embassy in London. http://t.co/9md2XJ9eFZ",
+               "user": "paloma74735236",
+               "client": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+               "retweeted": false,
+               "source": "http://twitter.com/paloma74735236/status/537651777186045952",
+               "@version": "1"
+            }
+
+{
+               "@timestamp": "2014-11-26T16:59:08.000Z",
+               "message": "Administration Assistant, London, Admin &amp; Secretarial http://t.co/Y4zUAho3Kv #jobs #administrationjobs #mediajobs",
+               "user": "_MediaContacts",
+               "client": "<a href=\"http://www.idibu.com\" rel=\"nofollow\">idibu Adpost</a>",
+               "retweeted": false,
+               "source": "http://twitter.com/_MediaContacts/status/537651779853619201",
+               "@version": "1",
+               "urls": [
+                  "http://idi.to/1v5z"
+               ]
+            }
+
+{
+               "@timestamp": "2014-11-26T16:59:08.000Z",
+               "message": "Eltham school create's London's first shipping container gallery http://t.co/0xidjRDFvH #newssucker",
+               "user": "NewsSuckerLive",
+               "client": "<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>",
+               "retweeted": false,
+               "source": "http://twitter.com/NewsSuckerLive/status/537651781619048448",
+               "@version": "1",
+               "urls": [
+                  "http://bit.ly/1rkuiOV"
+               ]
+            }
+
+
+{
+               "@timestamp": "2014-11-26T16:59:09.000Z",
+               "message": "RT @FoodDealsLondon: Three-Course Lunch with #Champagne for Two @GordonRamsay's @SavoyGrill, #London, £85 - http://t.co/Si7cFXu53j http://t.co/iHPDsQO4kZ",
+               "user": "SJShellfish",
+               "client": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+               "retweeted": false,
+               "source": "http://twitter.com/SJShellfish/status/537651785423675393",
+               "@version": "1",
+               "urls": [
+                  "http://tidd.ly/adff82f4"
+               ]
+            }

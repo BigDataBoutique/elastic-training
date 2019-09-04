@@ -1,0 +1,80 @@
+DELETE twitter
+
+GET twitter/_mapping
+
+POST twitter/_search
+{
+  "query": {
+    "term": {
+      "client": {
+        "value": "href"
+      }
+    }
+  }
+}
+
+PUT twitter
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "html_strip": {
+          "char_filter": "html_strip",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "_doc": {
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "@version": {
+          "type": "long"
+        },
+        "client": {
+          "type": "text",
+          "analyzer": "html_strip"
+        },
+        "message": {
+          "type": "text"
+        },
+        "retweeted": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "urls": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "user": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+   "mappings": {
+      "product": {
+         "properties": {
+            "description": {
+               "type": "string"
+            },
+            "tags": {
+               "type": "string"
+            },
+            "title": {
+               "type": "string"
+            },
+            "tag_suggest": {
+               "type": "completion",
+               "index_analyzer": "simple",
+               "search_analyzer": "simple",
+               "payloads": false
+            }
+         }
+      }
+   }
+}
+
+{
+    "title": "Product1",
+    "description": "Product1 Description",
+    "tags": [
+        "blog",
+        "magazine",
+        "responsive",
+        "two columns",
+        "wordpress"
+    ]
+}
+
+{
+    "title": "Product2",
+    "description": "Product2 Description",
+    "tags": [
+        "blog",
+        "paypal",
+        "responsive",
+        "skrill",
+        "wordland"
+    ]
+}
+
+POST test_index/_suggest
+{
+    "product_suggest":{
+        "text":"word",
+        "completion": {
+            "field" : "tag_suggest"
+        }
+    }
+}
+
+or:
+
+POST test_index/_search
+{
+  "query" : {
+    ...
+  },
+  "suggest" : {
+    "product_suggest" : {
+      "text" : "paipal",
+      "term" : {
+        "field" : "tag_suggest"
+      }
+    }
+  }
+}
