@@ -1,0 +1,433 @@
+{
+    "index_patterns": ["twitter-*"],
+    "mappings": {
+        "dynamic_templates": [
+          {
+            "unindexed_fields": {
+              "match": "*",
+              "mapping": {
+                "enabled": false,
+                "type": "object"
+              }
+            }
+          }
+        ],
+        "properties": {
+          "@timestamp": {
+            "type": "date",
+            "format": "dateOptionalTime"
+          },
+          "@version": {
+            "type": "object",
+            "enabled": false
+          },
+          "coordinates": {
+            "properties": {
+              "coordinates": {
+                "type": "geo_point"
+              },
+              "type": {
+                "type": "keyword"
+              }
+            }
+          },
+          "created_at": {
+            "type": "date",
+            "format": "E MMM dd HH:mm:ss Z yyyy"
+          },
+          "display_text_range": {
+            "type": "object",
+            "enabled": false
+          },
+          "entities": {
+            "properties": {
+              "hashtags": {
+                "properties": {
+                  "indices": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "text": {
+                    "type": "text"
+                  }
+                }
+              },
+              "media": {
+                "properties": {
+                  "display_url": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "expanded_url": {
+                    "type": "keyword"
+                  },
+                  "id": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "id_str": {
+                    "type": "keyword"
+                  },
+                  "indices": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "media_url": {
+                    "type": "keyword"
+                  },
+                  "media_url_https": {
+                    "type": "keyword"
+                  },
+                  "sizes": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "source_status_id": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "source_status_id_str": {
+                    "type": "keyword"
+                  },
+                  "source_user_id": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "source_user_id_str": {
+                    "type": "keyword"
+                  },
+                  "type": {
+                    "type": "keyword"
+                  },
+                  "url": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "symbols": {
+                "type": "object",
+                "enabled": false
+              },
+              "urls": {
+                "properties": {
+                  "display_url": {
+                    "type": "keyword"
+                  },
+                  "expanded_url": {
+                    "type": "keyword"
+                  },
+                  "indices": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "url": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "user_mentions": {
+                "properties": {
+                  "id": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "id_str": {
+                    "type": "keyword"
+                  },
+                  "indices": {
+                    "type": "object",
+                    "enabled": false
+                  },
+                  "name": {
+                    "type": "text"
+                  },
+                  "screen_name": {
+                    "type": "text"
+                  }
+                }
+              }
+            }
+          },
+          "extended_entities": {
+            "type": "object",
+            "enabled": false
+          },
+          "extended_tweet": {
+            "type": "object",
+            "enabled": false
+          },
+          "favorite_count": {
+            "type": "long"
+          },
+          "favorited": {
+            "type": "boolean"
+          },
+          "filter_level": {
+            "type": "keyword"
+          },
+          "geo": {
+            "properties": {
+              "coordinates": {
+                "type": "geo_point"
+              },
+              "type": {
+                "type": "text"
+              }
+            }
+          },
+          "id": {
+            "type": "object",
+            "enabled": false
+          },
+          "id_str": {
+            "type": "keyword"
+          },
+          "in_reply_to_screen_name": {
+            "type": "keyword"
+          },
+          "in_reply_to_status_id": {
+            "type": "object",
+            "enabled": false
+          },
+          "in_reply_to_status_id_str": {
+            "type": "keyword"
+          },
+          "in_reply_to_user_id": {
+            "type": "object",
+            "enabled": false
+          },
+          "in_reply_to_user_id_str": {
+            "type": "keyword"
+          },
+          "is_quote_status": {
+            "type": "boolean"
+          },
+          "lang": {
+            "type": "keyword"
+          },
+          "place": {
+            "properties": {
+              "attributes": {
+                "type": "object",
+                "enabled": false
+              },
+              "bounding_box": {
+                "type": "object",
+                "enabled": false
+              },
+              "country": {
+                "type": "text"
+              },
+              "country_code": {
+                "type": "keyword"
+              },
+              "full_name": {
+                "type": "keyword"
+              },
+              "id": {
+                "type": "keyword"
+              },
+              "name": {
+                "type": "text"
+              },
+              "place_type": {
+                "type": "keyword"
+              },
+              "url": {
+                "type": "keyword"
+              }
+            }
+          },
+          "possibly_sensitive": {
+            "type": "boolean"
+          },
+          "quoted_status": {
+            "type": "object",
+            "enabled": false
+          },
+          "quoted_status_id": {
+            "type": "object",
+            "enabled": false
+          },
+          "quoted_status_id_str": {
+            "type": "keyword"
+          },
+          "retweet_count": {
+            "type": "long"
+          },
+          "retweeted": {
+            "type": "boolean"
+          },
+          "retweeted_status": {
+            "type": "object",
+            "enabled": false
+          },
+          "source": {
+            "type": "text"
+          },
+          "text": {
+            "type": "text"
+          },
+          "timestamp_ms": {
+            "type": "long"
+          },
+          "truncated": {
+            "type": "boolean"
+          },
+          "user": {
+            "properties": {
+              "contributors_enabled": {
+                "type": "object",
+                "enabled": false
+              },
+              "created_at": {
+                "type": "object",
+                "enabled": false
+              },
+              "default_profile": {
+                "type": "object",
+                "enabled": false
+              },
+              "default_profile_image": {
+                "type": "object",
+                "enabled": false
+              },
+              "description": {
+                "type": "object",
+                "enabled": false
+              },
+              "favourites_count": {
+                "type": "long"
+              },
+              "followers_count": {
+                "type": "long"
+              },
+              "friends_count": {
+                "type": "long"
+              },
+              "geo_enabled": {
+                "type": "boolean"
+              },
+              "id": {
+                "type": "object",
+                "enabled": false
+              },
+              "id_str": {
+                "type": "keyword"
+              },
+              "is_translator": {
+                "type": "boolean"
+              },
+              "lang": {
+                "type": "keyword"
+              },
+              "listed_count": {
+                "type": "object",
+                "enabled": false
+              },
+              "location": {
+                "type": "text"
+              },
+              "name": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "profile_background_color": {
+                "type": "object",
+                "enabled": false
+              },
+              "profile_background_image_url": {
+                "type": "object",
+                "enabled": false
+              },
+              "profile_background_image_url_https": {
+                "type": "object",
+                "enabled": false
+              },
+              "profile_background_tile": {
+                "type": "object",
+                "enabled": false
+              },
+              "profile_banner_url": {
+                "type": "object",
+                "enabled": false
+              },
+              "profile_image_url": {
+                "type": "object",
+                "enabled": false
+              },
+              "profile_image_url_https": {
+                "type": "object",
+                "enabled": false
+              },
+              "profile_link_color": {
+                "type": "object",
+                "enabled": false
+              },
+              "profile_sidebar_border_color": {
+                "type": "object",
+                "enabled": false
+              },
+              "profile_sidebar_fill_color": {
+                "type": "object",
+                "enabled": false
+              },
+              "profile_text_color": {
+                "type": "object",
+                "enabled": false
+              },
+              "profile_use_background_image": {
+                "type": "object",
+                "enabled": false
+              },
+              "protected": {
+                "type": "boolean"
+              },
+              "screen_name": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "statuses_count": {
+                "type": "long"
+              },
+              "time_zone": {
+                "type": "text"
+              },
+              "url": {
+                "type": "text"
+              },
+              "utc_offset": {
+                "type": "long"
+              },
+              "verified": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+    },
+    "settings": {
+      "index": {
+        "number_of_shards": "1",
+        "analysis": {
+          "analyzer": {
+            "html_keyword": {
+              "type": "custom",
+              "char_filter": [
+                "html_strip"
+              ],
+              "tokenizer": "keyword"
+            }
+          }
+        },
+        "number_of_replicas": "0"
+      }
+    }}
