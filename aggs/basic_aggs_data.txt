@@ -3,7 +3,6 @@ DELETE /sports/
 PUT /sports/
 {
    "mappings": {
-      "_doc": {
          "properties": {
             "birthdate": {
                "type": "date",
@@ -22,11 +21,10 @@ PUT /sports/
                "type": "keyword"
             }
          }
-      }
    }
 }
 
-POST sports/_doc/_bulk
+POST sports/_bulk
 {"index":{"_index":"sports"}}
 {"name":"Michael", "birthdate":"1989-10-1", "sport":"Baseball", "rating": ["5", "4"],  "location":"46.22,-68.45"}
 {"index":{"_index":"sports"}}
