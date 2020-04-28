@@ -1,0 +1,85 @@
+POST _template/corona
+{
+  "index_patterns": [
+    "corona-*"
+  ],
+  "mappings": {
+    "properties": {
+      "@timestamp": {
+        "type": "date"
+      },
+      "Active": {
+        "type": "long"
+      },
+      "Admin2": {
+        "type": "keyword"
+      },
+      "Combined_Key": {
+        "type": "keyword"
+      },
+      "Confirmed": {
+        "type": "long"
+      },
+      "Country/Region": {
+        "type": "keyword"
+      },
+      "Country_Region": {
+        "copy_to": "Country/Region",
+        "type": "keyword"
+      },
+      "Deaths": {
+        "type": "long"
+      },
+      "FIPS": {
+        "type": "long"
+      },
+      "Last_Update": {
+        "type": "date",
+        "copy_to": "Last Update"
+      },
+      "Last Update": {
+        "type": "date"
+      },
+      "Lat": {
+        "type": "double"
+      },
+      "Latitude": {
+        "copy_to": "Lat",
+        "type": "double"
+      },
+      "Location": {
+        "type": "geo_point"
+      },
+      "Long_": {
+        "type": "double"
+      },
+      "Longitude": {
+        "copy_to": "Long_",
+        "type": "double"
+      },
+      "Province/State": {
+        "type": "keyword"
+      },
+      "Province_State": {
+        "copy_to": "Province/State",
+        "type": "keyword"
+      },
+      "Recovered": {
+        "type": "long"
+      },
+      "Date_Input": {
+        "type": "keyword"
+      },
+      "Type": {
+        "type": "keyword"
+      },
+      "Message":{
+        "type": "keyword"
+      }
+    }
+  },
+  "settings": {
+    "number_of_replicas": 0,
+    "refresh_interval": "-1"
+  }
+}

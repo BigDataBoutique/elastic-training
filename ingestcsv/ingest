@@ -1,0 +1,68 @@
+PUT _ingest/pipeline/coronacsvs
+{
+  "description": "convert corona csvs",
+  "processors": [
+    {
+      "csv": {
+        "field": "Message",
+        "target_fields": [
+          "@timestamp",
+          "Province/State",
+          "Country/Region",
+          "Date_Input",
+          "Confirmed",
+          "Deaths",
+          "Recovered",
+          "Latitude",
+          "Longitude"
+        ],
+        "if": "ctx.Type=='V1'",
+        "separator": "|"
+      }
+    },
+    {
+      "csv": {
+        "field": "Message",
+        "target_fields": [
+          "@timestamp",
+          "FIPS",
+          "Admin2",
+          "Province/State",
+          "Country/Region",
+          "Date_Input",
+          "Latitude",
+          "Longitude",
+          "Confirmed",
+          "Deaths",
+          "Recovered",
+          "Active",
+          "Combined_Key"
+        ],
+        "if": "ctx.Type=='V2'",
+        "separator": "|"
+      }
+    },
+    {
+      "set": {
+        "field": "Location",
+        "value": "{{Latitude}}, {{Longitude}}",
+        "if": "ctx.containsKey('Latitude') && ctx.containsKey('Longitude')"
+      }
+    },
+    {
+      "date": {
+
+        "field": "Date_Input",
+        "target_field": "Last_update",
+        "formats": ["ISO8601"],
+        "on_failure": [
+          {
+            "script": {
+              "source": "ctx.Last_Update = new SimpleDateFormat('MM/dd/yyyy h:m').parse(ctx.Date_Input)"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
