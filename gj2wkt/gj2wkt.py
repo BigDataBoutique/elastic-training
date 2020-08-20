@@ -26,5 +26,5 @@ data_frame = pd.DataFrame(results)
 table = pa.Table.from_pandas(data_frame)
 
 filesystem = s3fs.S3FileSystem()
-path = "s3://bdbq-israel-boundaries/pa"
+path = "s3://s3-path-here"
 pq.write_to_dataset(table, root_path=path, compression='gzip', filesystem=filesystem)
