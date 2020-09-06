@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   es7:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.0
     container_name: es7
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9200"]
@@ -14,7 +14,7 @@ services:
       - 127.0.0.1:9200:9200
 
   kibana7:
-    image: docker.elastic.co/kibana/kibana:7.6.0
+    image: docker.elastic.co/kibana/kibana:7.9.0
     container_name: kibana7
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5601"]
