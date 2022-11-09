@@ -1,0 +1,91 @@
+{
+/*
+
+This is the source for a vega-lite bubble chart for use with Kibana as explained here:
+https://blog.bigdataboutique.com/2021/04/bubble-chart-in-kibana-with-vega-5il1u2
+To get the data for this chart, follow the procedure here:
+https://blog.bigdataboutique.com/2020/05/using-ingest-processors-to-load-data-into-elasticsearch-analyzing-covid-19-spread-part-4-e0k551
+*/
+
+  $schema: https://vega.github.io/schema/vega-lite/v4.json
+  title: Event counts from all indexes
+
+  data: {
+    url: {
+      %context%: true
+      %timefield%: Last_update
+
+      index: corona-v2-fb
+      body: {
+         "aggs": {
+    "my_buckets": {
+      "composite": {
+        "size": 65535,
+        "sources": [
+          {
+            "time_buckets": {
+              "date_histogram": {
+                "field": "Last_update",
+                "interval": "day"
+              }
+            }
+          },
+          {
+            "place": {
+              "terms": {
+                "field": "Country/Region"
+              }
+            }
+          }
+        ]
+      },
+      "aggs": {
+        "deaths": {
+          "sum": {
+            "field": "Deaths"
+          }
+        },
+
+        "confirmed": {
+          "sum": {
+            "field": "Confirmed"
+          }
+        },
+        "filter": {
+          "bucket_selector": {
+            "buckets_path": {
+              "deaths": "deaths.value"
+            },
+            "script": "params.deaths > 0"
+          }
+        }
+      }
+    }
+  }
+        size: 0
+      }
+    }
+
+    format: {property: "aggregations.my_buckets.buckets"}
+  }
+
+  mark: {"type": "circle", "tooltip": true}
+
+  encoding: {
+    x: {
+      field: key.time_buckets
+      type: temporal
+      axis: {title: false}
+    }
+    y: {
+      field: deaths.value
+      type: quantitative
+      axis: {title: "Average deaths"}
+    }
+    "size": {"field": "confirmed.value", "type": "quantitative"},
+    color: {
+          "field": "key.place",
+          "type": "nominal"
+          }
+  }
+}
