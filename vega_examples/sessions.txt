@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Average duration from all sessions",
+  "data": {
+    "url": {
+      "%context%": true,
+      "%timefield%": "creation_date",
+      "index": "sessions",
+      "body": {
+        "aggs": {
+          "sessions": {
+            "terms": {"field": "session_id", "size": 10},
+            "aggs": {
+              "starts": {
+                "filter": {"term": {"event_type": "start_session"}},
+                "aggs": {"date": {"min": {"field": "creation_date"}}}
+              },
+              "ends": {
+                "filter": {"term": {"event_type": "end_session"}},
+                "aggs": {"date": {"min": {"field": "creation_date"}}}
+              },
+              "select": {
+                "bucket_selector": {
+                  "buckets_path": {
+                    "start": "starts._count",
+                    "end": "ends._count"
+                  },
+                  "script": "params.start > 0 && params.end > 0"
+                }
+              },
+              "duration": {
+                "bucket_script": {
+                  "buckets_path": {
+                    "starttime": "starts>date",
+                    "endtime": "ends>date"
+                  },
+                  "script": "(params.endtime - params.starttime)/1000/24/60/60"
+                }
+              }
+            }
+          },
+          "average_duration": {
+            "avg_bucket": {"buckets_path": "sessions.duration"}
+          }
+        },
+        "size": 0
+      }
+    },
+    "format": {"property": "aggregations.average_duration"}
+  },
+  "mark": {"type": "text", "fontSize": 50},
+  "encoding": {"text": {"field": "value", "type": "quantitative"}}
+}
