@@ -1,3 +1,4 @@
+POST tweets/_doc
 {
                "@timestamp": "2014-11-26T16:59:05.000Z",
                "message": "RT @foxymeryl: Dreamed it was the zombie apocalypse in London and a tidal wave took out the city, was very wet",
@@ -7,7 +8,7 @@
                "source": "http://twitter.com/apocsurvivalist/status/537651770223509505"
 }
 
-
+POST tweets/_doc
 {
                "@timestamp": "2014-11-26T16:59:05.000Z",
                "message": "RT @UKIP: UKIP Leader @Nigel_Farage: If Owen Paterson wants to leave the EU he should join UKIP. http://t.co/NTX6X0YoTn",
@@ -22,6 +23,7 @@
             }
 
 
+POST tweets/_doc
 {
                "@timestamp": "2014-11-26T16:59:06.000Z",
                "message": "RT @VirginEMI: Watch @professorgreen live from London at 9pm tonight for @HPUK http://t.co/QCPBlH9gns #HPConnectedMusic http://t.co/MrT7AD9f0C",
@@ -36,6 +38,7 @@
             }
 
 
+POST tweets/_doc
 {
                "@timestamp": "2014-11-26T16:59:06.000Z",
                "message": "RT @timchester: Naked man runs over rooftops of London in the name of art &gt;  http://t.co/5yjIiTBE9Y via @mashable",
@@ -48,7 +51,8 @@
                   "http://mashable.com/2014/11/25/naked-parkour/#:eyJzIjoidCIsImkiOiJfZnVvYmN6anY2dnhpY3ZkNyJ9"
                ]
             }
-
+            
+POST tweets/_doc
 {
                "@timestamp": "2014-11-26T16:59:06.000Z",
                "message": "RT @sarahill42: '@tottenhamlife @tottenhamplough @tottenhamarts @wildescheese @Footsteps_Moon \nHarringay or Haringey even is 8th best http://t.co/UwO7xfKLD9",
@@ -61,7 +65,8 @@
                   "http://metro.co.uk/2014/11/25/london-boroughs-ranked-from-worst-to-best-4954449/"
                ]
             }
-
+            
+POST tweets/_doc
 {
                "@timestamp": "2014-11-26T16:59:07.000Z",
                "message": "#NewYork #Sports Carmelo Anthony not expected to play against Mavericks: Carmelo Anthony wasn't a... http://t.co/fizVdOcyb1 #News #Sport",
@@ -75,7 +80,7 @@
                ]
             }
 
-
+POST tweets/_doc
 {
                "@timestamp": "2014-11-26T16:59:07.000Z",
                "message": "RT @wikileaks: Just now: #Assange &amp; #Chomsky take in the view of the police operation against the Ecuadorian embassy in London. http://t.co/9md2XJ9eFZ",
@@ -86,6 +91,7 @@
                "@version": "1"
             }
 
+POST tweets/_doc
 {
                "@timestamp": "2014-11-26T16:59:08.000Z",
                "message": "Administration Assistant, London, Admin &amp; Secretarial http://t.co/Y4zUAho3Kv #jobs #administrationjobs #mediajobs",
@@ -99,6 +105,7 @@
                ]
             }
 
+POST tweets/_doc
 {
                "@timestamp": "2014-11-26T16:59:08.000Z",
                "message": "Eltham school create's London's first shipping container gallery http://t.co/0xidjRDFvH #newssucker",
@@ -112,7 +119,7 @@
                ]
             }
 
-
+POST tweets/_doc
 {
                "@timestamp": "2014-11-26T16:59:09.000Z",
                "message": "RT @FoodDealsLondon: Three-Course Lunch with #Champagne for Two @GordonRamsay's @SavoyGrill, #London, £85 - http://t.co/Si7cFXu53j http://t.co/iHPDsQO4kZ",
